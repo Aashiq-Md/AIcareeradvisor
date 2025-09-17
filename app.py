@@ -1,6 +1,7 @@
 from google import genai
 import streamlit as st
 advisor=genai.Client(api_key="AIzaSyDr_EH3XI44ltHmHAF5KaLJK5Igl7veRS0")
+st.title("AI CAREER ADVISOR WEB")
 age=st.text_input("what is your age:")
 qualification=st.text_input("what is your qualification:")
 designation=st.text_input("what is your current designation:")
@@ -31,3 +32,4 @@ keep it simple and jot it in bullet points,also suggest some resourse material a
 if st.button("Submit:"):
     response=advisor.model.generate_content(model="gemini-1.5-flash",contents=prompt)
     st.write(response.text)
+    "python -m streamlit run app.py - -server.port "$Port"
