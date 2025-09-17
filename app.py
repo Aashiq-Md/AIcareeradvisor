@@ -30,6 +30,6 @@ keep it simple and jot it in bullet points,also suggest some resourse material a
 """
 
 if st.button("Submit:"):
-    response=advisor.model.generate_content(model="gemini-1.5-flash",contents=prompt)
+    response=advisor.models.generate_content(model="gemini-1.5-flash",contents=prompt)
     st.write(response.text)
     
